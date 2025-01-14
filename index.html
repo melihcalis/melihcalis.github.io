@@ -1,117 +1,75 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melih Calis</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: black; /* Added a background color for better contrast */
+        }
 
-<html class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Melih Çalış</title>
-    </head>
-    <body class="bg-neutral-100 font-sans">
-        <nav class="bg-white mt-4 border-black border w-screen lg:w-1/2 sticky top-0 max-w-full mx-auto">
-            <ul class="flex justify-between">
-                <span class="px-4 py-3 font-bold">Melih Çalış</span>
-                <span class="flex justify-between">
-                    <li class="border-x border-black flex justify-center">
-                        <a class="px-4 py-3 hover:bg-slate-400 scroll-mt-100" href="#contact">Contact</a>
-                    </li>
-                    <li class="border-r border-black flex justify-center">
-                        <a class="px-4 py-3 hover:bg-slate-400" href="#contact">Education</a>
-                    </li>
-                    <li class="border-r border-black flex justify-center">
-                        <a class="px-4 py-3 hover:bg-slate-400" href="#contact">Work Experience</a>
-                    </li>
-                    <li class="flex justify-center">
-                        <a class="px-4 py-3 hover:bg-slate-400" href="#contact">Skills</a>
-                    </li>
-                </span>
-            </ul>
-        </nav>
-  
-        <div class="w-screen lg:w-1/2 max-w-full mx-auto">
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
 
-            <div id="contact" class="invisible mt-[300]">a</div>
-            <div class="bg-white mt-10 mb-2.5">
-                <span class="flex justify-center text-sm font-bold">MELİH ÇALIŞ</span>
-            </div>
-            
-            <div class="bg-white mb-2.5">
-                <div>
-                    <span class="flex justify-center text-sm">mel11h@yandex.com</span>
-                    <span class="flex justify-center text-sm"><span>Check my <a href="cv" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">resume</a> for latest updates.</span></span>
-                </div>
-            </div>
-            
-            <div class="bg-white mb-2.5">
-                <div>
-                    <span class="text-sm font-bold">Education</span>
-                    <span class="block border-b m-0.5"></span>
-                    <span class="flex justify-between text-sm"><span class="font-bold">Hacettepe University</span><span>October 2019 - July 2024</span></span>
-                    <span class="text-sm block indent-3">Bachelor of Science, Computer Engineering</span>
-                </div>
-            </div>
-            <div class="bg-white mb-2.5">
-                <div>
-                    <span class="text-sm font-bold block">Work Experience</span>
-                    <span class="block border-b my-2 border-slate-300"></span>
-                    <span class="flex justify-between text-sm"><span class="font-bold">TechNarts - Nart Bilişim Hizmetleri</span><span>August 2023 - November 2023</span></span>
-                    <span class="text-sm block indent-3">Summer Internship</span>
-                    <span class="text-sm italic indent-3 block">Built a habit tracking web application using PostgreSQL and Python Django. <a href="https://habito.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">habito.pythonanywhere.com</a></span>
-                    <span class="block my-2"></span>
-                    <span class="flex justify-between text-sm"><span class="font-bold">Akbank</span><span>December 2023 - January 2024</span></span>
-                    <span class="text-sm block indent-3">.NET Core Bootcamp</span>
-                    <span class="text-sm italic indent-3 block">Built a banking web API using ASP.NET with C#.</span>
-                </div>
-            </div>
-            <div class="bg-white mb-2.5">
-                <span class="text-sm"><span class="font-bold">GitHub </span><a href="https://github.com/melihcalis" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">github.com/u/melihcalis</a></span>
-            </div>
-            <div class="bg-white mb-2.5">
-                <span class="text-sm"><span class="font-bold">Docker Hub </span><a href="https://hub.docker.com/u/melihcalis" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">hub.docker.com/u/melihcalis</a></span>
-            </div>
-            <div class="bg-white mb-2.5">
-                <div>
-                    <span class="text-sm font-bold block">Skills</span>
-                    <span class="block border-b my-2 border-slate-300"></span>
-                    
-                    <span class="font-bold block text-sm">Programming languages</span>
-                    <span class="text-sm block indent-3"><span>SQL </span><span class="italic text-gray-400">// Completed the track SQL Fundamentals(7 courses) on DataCamp. certification <a href="https://www.datacamp.com/statement-of-accomplishment/track/86add146658b3ed65745b09cecd300d38e918d39" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">here</a></span></span>
-                    <span class="text-sm block indent-3 block">Python (Numpy, Matplotlib, pandas)</span>
-                    <span class="text-sm indent-3 block">Javascript <a href="https://melihcalis.github.io/js.html" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">mini projects</a></span>
-                    <span class="text-sm block indent-3 block">Java, C++</span>
-                    <span class="block my-2"></span>
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
 
-                    <span class="block text-sm"><span class="font-bold">Data structures & algorithms </span><a href="https://github.com/melihcalis/leetcode" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">repo consisting my leetcode solutions</a></span>
-                    <span class="block my-2"></span>
+        a {
+            color: white;
+            text-decoration: underline;
+        }
 
-                    <span class="font-bold block text-sm">Software</span>
-                    <span class="block text-sm indent-3">PostgreSQL, pgAdmin 4 on Docker <a href="https://gist.github.com/melihcalis/1e03babb022a674bd0a53abb52bd0b14" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">docker-compose.yml</a></span>
-                    <span class="block text-sm indent-3">Git</span>
-                    <span class="block text-sm indent-3">Docker</span>
-                    <span class="block my-2"></span>
+        a:hover {
+            color: #3498db;
+        }
 
-                    <span class="font-bold block text-sm">Database design</span>
-                    <span class="block text-sm indent-3">Normalization(1NF, 2NF, 3NF), Partitioning</span>
-                    <span class="block text-sm indent-3">Relational model, dimensional modeling, star & snowflake schemas</span>
-                    <span class="block text-sm indent-3">OLAP(ETL, ELT), OLTP</span>
-                    <span class="block text-sm indent-3">Currently preparing for AWS exams SAA-C03, CLF-C02</span>
-                    <span class="block my-2"></span>
+        #audio-controls {
+            display: none; /* Hide the audio controls */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="a.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h1>Check my <a id="resumeLink" href="https://docs.google.com/document/d/18aQkBv26OJZ-s5jcKioizCymdI9siD5Ajs_mTfOc1rA/edit?usp=sharing">resume</a> for latest updates</h1>
 
-                    <span class="font-bold block text-sm">Security</span>
-                    <span class="block text-sm indent-3">Technical electives: Information Security & Lab, Secure Programming &</span>
-                    <span class="block text-sm indent-3">Lab, Computer and Network Security, Fundamentals of Blockchain</span>
-                    <span class="block my-2"></span>
+    <div id="audio-controls">
+        <audio id="myAudio">
+            <source src="c.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
-                    
+    <script>
+        const resumeLink = document.getElementById("resumeLink");
+        const myAudio = document.getElementById("myAudio");
 
-                    <span class="font-bold block text-sm">Languages</span>
-                    <span class="text-sm block indent-3">English, full professional proficiency</span>
-                    <span class="text-sm block indent-3"><a href="https://docs.google.com/document/d/1z8O92O9kLRItjBfU5oz3MVBHroN4mDvCbsEg2nHLUCo/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="underline text-cyan-600">German, limited working proficiency</a></span>
-                    <span class="block my-2"></span>
-                </div>
-            </div>  
-            <div class="invisible h-96">a</div> 
-        </div>
-        
-    </body>
+        resumeLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            myAudio.play();
+            window.open(resumeLink.href, '_blank'); // Open link in new tab
+        });
+    </script>
+</body>
 </html>
